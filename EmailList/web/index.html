@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Murach's Java Servlets and JSP</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css"/>
+    <script src="check.js"></script>
+</head>
+<body>
+    <h1>Join our email list</h1>
+    <p>To join our email list, enter your name and
+       email address below.</p>
+    <form action="emailList" method="post">
+        <input type="hidden" name="action" value="add">
+
+        <label>Email:</label>
+        <input type="text" id ="email" name="email" onchange ="checkInput()"><span id = "error_mail"></span><br>
+
+        <label>First Name:</label>
+        <input type="text" id ="firstName" name="firstName" onchange = "checkEmpty()" ><span id = "error_fname"></span><br>
+
+        <label>Last Name:</label>
+        <input type="text" id ="lastName" name="lastName"onchange = "checkEmpty()" ><span id = "error_lname"></span><br>
+        <label> Sex: </label>
+        <input type = "radio" name ="sex" checked="checked" value ="Male" >Male
+        <input type="radio" name="sex" value ="Female" >Female<br>
+        <label> Education:</label>
+        <select name ="education">
+            <option>University</option>
+            <option>College</option>
+            <option>Intermediate</option>
+        </select><br>
+        <label>&nbsp;</label>
+        <input type="submit" value="Join Now" id="submit">
+    </form>
+</body>
+</html>
+
